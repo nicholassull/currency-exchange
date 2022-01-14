@@ -12,3 +12,10 @@ header {
   background-color: aquamarine;
   height: 150px;
 }
+
+#sidebar {
+  width: 20%;
+  margin: 20px;
+  background-color: cornflowerblue;
+  height: auto;
+}
