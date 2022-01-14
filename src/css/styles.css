@@ -1,0 +1,14 @@
+body{
+  background-color: bisque;
+}
+
+#primary-container{
+  max-width: 950px;
+  margin: 0 auto;
+
+}
+
+header {
+  background-color: aquamarine;
+  height: 150px;
+}
