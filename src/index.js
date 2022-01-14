@@ -10,16 +10,19 @@ import CurrencyService from './js/currency-service';
 // 4 : MXN : Mexican Peso
 // 5 : ZAR : South Agrican Rand
 
+function postExchange(currency, amount) {
+  let finalValue = CurrencyService.exchange(sessionStorage.getItem(currency), amount);
+  $("#currency-display").text(finalValue);
+}
 
 $(document).ready(function() {
   CurrencyService.getData()
     .then(function(response) {
       CurrencyService.storeData(response);
-    }).then(function(response){
-      console.log(sessionStorage.getItem(1));
     });
   $('#exchange-btn').click(function() {
-    let currency = $('#exchange-select').val();
-
+    let currency = parseInt($('#exchange-select').val());
+    let amount = parseInt($("#amount-input").val());
+    postExchange(currency, amount);
   });
 });

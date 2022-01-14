@@ -12,9 +12,8 @@ export default class CurrencyService {
       })
       .catch(function(error) {
         return error;
-      })
+      });
   }
-
   static storeData(response) {
     if (response.result) {
       sessionStorage.setItem(1, response.conversion_rates.NZD);
@@ -23,6 +22,12 @@ export default class CurrencyService {
       sessionStorage.setItem(4, response.conversion_rates.MXN);
       sessionStorage.setItem(5, response.conversion_rates.ZAR);
     }
+  }
+
+  static exchange(rate, amount) {
+    console.log(rate);
+    console.log(amount);
+    return amount * parseInt(rate);
   }
 }
 
