@@ -12,7 +12,8 @@ import CurrencyService from './js/currency-service';
 
 function postExchange(currency, amount) {
   let finalValue = CurrencyService.exchange(sessionStorage.getItem(currency), amount);
-  $("#currency-display").text(finalValue);
+  console.log(finalValue);
+  $("#response-display").text(finalValue);
 }
 
 $(document).ready(function() {
