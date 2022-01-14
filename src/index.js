@@ -10,20 +10,11 @@ import CurrencyService from './js/currency-service';
 // 4 : MXN : Mexican Peso
 // 5 : ZAR : South Agrican Rand
 
-function storeData(response) {
-  if (response.result) {
-    sessionStorage.setItem(1, response.conversion_rates.NZD);
-    sessionStorage.setItem(2, response.conversion_rates.INR);
-    sessionStorage.setItem(3, response.conversion_rates.JPY);
-    sessionStorage.setItem(4, response.conversion_rates.MXN);
-    sessionStorage.setItem(5, response.conversion_rates.ZAR);
-  }
-}
 
 $(document).ready(function() {
   CurrencyService.getData()
     .then(function(response) {
-      storeData(response);
+      CurrencyService.storeData(response);
     }).then(function(response){
       console.log(sessionStorage.getItem(1));
     });

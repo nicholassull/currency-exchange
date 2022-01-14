@@ -14,5 +14,15 @@ export default class CurrencyService {
         return error;
       })
   }
+
+  static storeData(response) {
+    if (response.result) {
+      sessionStorage.setItem(1, response.conversion_rates.NZD);
+      sessionStorage.setItem(2, response.conversion_rates.INR);
+      sessionStorage.setItem(3, response.conversion_rates.JPY);
+      sessionStorage.setItem(4, response.conversion_rates.MXN);
+      sessionStorage.setItem(5, response.conversion_rates.ZAR);
+    }
+  }
 }
 
