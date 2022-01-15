@@ -16,33 +16,37 @@
     </header>
     <main>
       <div class="float-right" id="sidebar">
-        <p>Sidebar</p>
-        <div id="response-display">
-
-        </div>
+        <div id="error-display">Test</div>
       </div>
       <div id="main-content">
         <div class="card">
           <h5 class="card-header">Currency Converter</h5>
           <div class="card-body">
             <p>Select which currency you would like to convert your money into.</p>
-            <form id="exchange-form">
-              <div class="form-group">
-                <label for="exchange-select">Currency</label>
-                <select class="form-control" name="exchange-select" id="exchange-select">
-                  <option selected>Select Currency</option>
-                  <option value="1">New Zealand Dollar</option>
-                  <option value="2">Indian Roupee</option>
-                  <option value="3">Japanese Yen</option>
-                  <option value="4">Mexican Peso</option>
-                  <option value="5">South African Rand</option>
-                </select>
+            <div class="row">
+              <form  class="col-8" id="exchange-form">
                 <div class="form-group">
-                  <label for="amount-input">Amount</label>
-                  <input class="form-control" id="amount-input" type="number">
+                  <label for="exchange-select">Currency</label>
+                  <select class="form-control" name="exchange-select" id="exchange-select">
+                    <option selected>Select Currency</option>
+                    <option value="1">New Zealand Dollar</option>
+                    <option value="2">Indian Roupee</option>
+                    <option value="3">Japanese Yen</option>
+                    <option value="4">Mexican Peso</option>
+                    <option value="5">South African Rand</option>
+                  </select>
+                  <div class="form-group">
+                    <label for="amount-input">Amount</label>
+                    <input class="form-control" id="amount-input" type="number">
+                  </div>
+                </div>
+              </form>
+              <div class="col-4 d-flex flex-column align-items-center" id="output-wrapper">
+                <h4 id="exchange-header">Exchange Value</h4>
+                <div id="exchange-output">
                 </div>
               </div>
-            </form>
+            </div>
             <button id="exchange-btn" class="btn btn-success">Exchange</button>
           </div>
         </div>

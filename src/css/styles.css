@@ -9,13 +9,38 @@ body{
 }
 
 header {
-  background-color: aquamarine;
+  background-color: rgb(172, 212, 179);
   height: 150px;
+}
+
+#banner-div {
+  padding-top: 25px;
+}
+
+#main-content {
+  margin: 15px 0px;
 }
 
 #sidebar {
   width: 20%;
   margin: 20px;
-  background-color: cornflowerblue;
   height: auto;
+  background-color: rgb(172, 212, 179);
+  border-radius: 5px;
+}
+
+#exchange-header {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#exchange-output  {
+  width: 100%;
+  height: 70px;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 19px 5px 5px 5px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(172, 212, 179);
 }
