@@ -16,11 +16,11 @@ export default class CurrencyService {
   }
   static storeData(response) {
     if (response.result) {
-      sessionStorage.setItem(1, response.conversion_rates.NZD);
-      sessionStorage.setItem(2, response.conversion_rates.INR);
-      sessionStorage.setItem(3, response.conversion_rates.JPY);
-      sessionStorage.setItem(4, response.conversion_rates.MXN);
-      sessionStorage.setItem(5, response.conversion_rates.ZAR);
+      sessionStorage.setItem(1, parseInt(response.conversion_rates.NZD));
+      sessionStorage.setItem(2, parseInt(response.conversion_rates.INR));
+      sessionStorage.setItem(3, parseInt(response.conversion_rates.JPY));
+      sessionStorage.setItem(4, parseInt(response.conversion_rates.MXN));
+      sessionStorage.setItem(5, parseInt(response.conversion_rates.ZAR));
     } else {
       sessionStorage.setItem(6, `There was an error: ${response.message}`)
     }
@@ -28,7 +28,7 @@ export default class CurrencyService {
 
   static exchange(rate, amount) {
     console.log(rate, amount);
-    return amount * parseInt(rate);
+    return amount * rate;
   }
 }
 
