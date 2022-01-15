@@ -23,21 +23,28 @@ _This webpage receives an amount of USD from the user along with a currency the 
 
 * _Open your terminal and navigate to the folder you'd like to download the files into._
 * _Run the command below_
-> git clone https://github.com/nicholassull/galactic-age-calculator
+> git clone https://github.com/nicholassull/currency-exchange.git
+* _Create a free account at [ExchangeRate-API](https://www.exchangerate-api.com/) to receive a free API key._
+* _Open src/js/currency-service.js_
+* _Replace the section of code below, found on line 6, with your own API key._
+> ${process.env.API_KEY}
 * _Navigate to the root directory of the project in your terminal._
 * _Run the commands bellow, allowing them time to complete._
+
 > npm install
+<br />
 > npm run build
+<br />
 > npm run start
 
 
 ## Known Bugs
 
-* _No known bugs at this time._
+* _NZD is not converting correctly._
 
 ## License
 
-Copyright (c) _10/27/2021_ _by Nick Sullivan_
+Copyright (c) _01/15/2022_ _by Nick Sullivan_
 
 
 _Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:_
