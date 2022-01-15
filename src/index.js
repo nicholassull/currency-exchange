@@ -12,10 +12,13 @@ import CurrencyService from './js/currency-service';
 
 function postExchange(currency, amount) {
   let finalValue = CurrencyService.exchange(sessionStorage.getItem(currency), amount);
-  if (!sessionStorage.getItem(6)) {
+  if (sessionStorage.getItem(6)) {
+    $("#error-display").text("Currency not found");
+    $("#sidebar").fadeIn();
+  } else if (!sessionStorage.getItem(7)) {
     $("#exchange-output").text(finalValue);
   } else {
-    $("#error-display").text(sessionStorage.getItem(6));
+    $("#error-display").text(sessionStorage.getItem(7));
     $("#sidebar").fadeIn();
   }
 }

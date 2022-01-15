@@ -11,6 +11,7 @@ export default class CurrencyService {
         return response.json();
       })
       .catch(function(error) {
+        console.log(error);
         return error;
       });
   }
@@ -21,8 +22,10 @@ export default class CurrencyService {
       sessionStorage.setItem(3, parseInt(response.conversion_rates.JPY));
       sessionStorage.setItem(4, parseInt(response.conversion_rates.MXN));
       sessionStorage.setItem(5, parseInt(response.conversion_rates.ZAR));
+    } else if (response.message === "Not Found") {
+      sessionStorage.setItem(6, `Currency not found`)
     } else {
-      sessionStorage.setItem(6, `There was an error: ${response.message}`)
+      sessionStorage.setItem(7, `There was an error: ${response.message}`)
     }
   }
 
