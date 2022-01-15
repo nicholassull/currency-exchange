@@ -27,7 +27,6 @@ export default class CurrencyService {
   }
 
   static exchange(rate, amount) {
-    console.log(rate, amount);
     return amount * rate;
   }
 }

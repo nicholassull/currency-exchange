@@ -12,7 +12,12 @@ import CurrencyService from './js/currency-service';
 
 function postExchange(currency, amount) {
   let finalValue = CurrencyService.exchange(sessionStorage.getItem(currency), amount);
-  $("#exchange-output").text(finalValue);
+  if (!sessionStorage.getItem(6)) {
+    $("#exchange-output").text(finalValue);
+  } else {
+    $("#error-display").text(sessionStorage.getItem(6));
+    $("#sidebar").fadeIn();
+  }
 }
 
 $(document).ready(function() {
