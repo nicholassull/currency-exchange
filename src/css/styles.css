@@ -4,6 +4,7 @@ body{
 
 #primary-container{
   max-width: 950px;
+  min-width: 700px;
   margin: 0 auto;
 
 }

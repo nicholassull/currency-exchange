@@ -21,6 +21,8 @@ export default class CurrencyService {
       sessionStorage.setItem(3, response.conversion_rates.JPY);
       sessionStorage.setItem(4, response.conversion_rates.MXN);
       sessionStorage.setItem(5, response.conversion_rates.ZAR);
+    } else {
+      sessionStorage.setItem(6, `There was an error: ${response.message}`)
     }
   }
 
